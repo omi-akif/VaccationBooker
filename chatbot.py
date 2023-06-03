@@ -1,10 +1,11 @@
 from langchain.llms import OpenAI
 from langchain.agents import create_csv_agent
 
+# import os
+# os.environ["OPENAI_API_KEY"] = "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"
 
-agent = create_csv_agent(OpenAI(temperature=0), 'titanic.csv', verbose=True)
 
-openai_api_key="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"
+agent = create_csv_agent(OpenAI(temperature=0.9), 'hotel_bookings.csv', verbose=True)
 
 
 while True:
