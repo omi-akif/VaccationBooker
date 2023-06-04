@@ -30,4 +30,4 @@ python chatbot.py
 
 And you should see a prompt being generate for user. You can write whatever you want related to booking a room or anything. The agent will answer according to the information that has been fed, i.e. the csv files. Here you will be able to see how the flow of the chat works.
 
-Type "EXIT" to exit the file.
+Type "EXIT" to exit the loop.
