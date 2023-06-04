@@ -1,23 +1,19 @@
+from langchain.agents.agent_toolkits import create_csv_agent
 from langchain.llms import OpenAI
-from langchain.agents import create_csv_agent
-
-# import os
-# os.environ["OPENAI_API_KEY"] = "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"
 
 
-agent = create_csv_agent(OpenAI(temperature=0.9), 'hotel_bookings.csv', verbose=True)
+llm = OpenAI(temperature=0.9, openai_api_key="YOUR-API-KEY")
+
+
+agent_executor = create_csv_agent(llm, 'hotel_bookings.csv', verbose=True)
 
 
 while True:
-    user_input = input("USER: ")
+    text = input("USER: ")
 
 
-    if user_input == "EXIT":
+    if text == "EXIT":
         print("Exiting the program...")
         break
 
-    # Perform the desired operation based on the input
-    # Add your own logic here
-    agent.run(user_input)
-
-print("Program terminated.")
+    print("Bot: ", agent_executor.run(text)) 
