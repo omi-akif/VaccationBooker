@@ -9,6 +9,17 @@ python3 -m venv /home/user/booker
 
 ```
 
+<br>
+
+Make sure to activate the environment:
+
+```
+source /home/user/booker/bin/activate
+
+```
+
+
+
 
 Afterwards, you need to install the requirements. You can do that by running this command.
 
